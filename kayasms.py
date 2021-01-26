@@ -43,19 +43,15 @@ print("\n| Mesajınızın Gönderilebilecek kısmı aşagıdaki gibidir.\n"+arlk
 
 drlm = input("\n| Mesajınız Gönderilsinmi?[y/n] >>> ")
 
-from clockwork import clockwork
-
-api = clockwork.API("API_KEY_GOES_HERE")
-message = clockwork.SMS( to = "441234567890", message = "Hello World" )
-response = api.send(message)
-
-if response.success:
-    print (response.id)
-else:
-    print (response.error_code)
-    print (response.error_description)
+import requests
+resp = requests.post('https://textbelt.com/text', {
+  'phone': '5555555555',
+  'message': 'Hello world',
+  'key': 'textbelt',
+})
+print(resp.json())
 
 elif drlm == "n" or drlm == "N":
     quit()
 else:
-    print("\n|Hata yaptınız.")
+    print("\n|Hata yaptın kanka :D")
