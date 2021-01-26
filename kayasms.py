@@ -44,13 +44,21 @@ print("\n| Mesajınızın Gönderilebilecek kısmı aşagıdaki gibidir.\n"+arlk
 drlm = input("\n| Mesajınız Gönderilsinmi?[y/n] >>> ")
 
 if drlm == "y" or drlm == "Y":
-    print("\n"+sor+"\n"+arlk+"\n")
-    resp = requests.post('https://textbelt.com/text', {
-  'phone': sor,
-  'message': arlk,
-  'key': 'textbelt',
-    })
-    print(resp.json())
+    import urllib.request
+import urllib.parse
+
+def sendSMS(apikey, numbers, sender, message):
+    data =  urllib.parse.urlencode({'apikey': apikey, 'numbers': numbers,
+        'message' : message, 'sender': sender})
+    data = data.encode('utf-8')
+    request = urllib.request.Request("https://api.txtlocal.com/send/?")
+    f = urllib.request.urlopen(request, data)
+    fr = f.read()
+    return(fr)
+
+resp =  sendSMS('apikey', '447123456789',
+    'Jims Autos', 'This is your message')
+print (resp)
 
 elif drlm == "n" or drlm == "N":
     quit()
