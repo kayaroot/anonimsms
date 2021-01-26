@@ -3,8 +3,6 @@
 
 import requests
 from os import system as s
-import urllib.request
-import urllib.parse
 
 import os
 
@@ -35,11 +33,11 @@ banner = """
 
 print(banner)
 
-numbers = input("Tel adresi Örn: +905555555555 >>> ")
+sor = input("Telefon numarası Örn:+905555555555 >>> ")
 
 mesaj = input("Mesajınız >>> ")
 
-message = mesaj[0:70]
+arlk = mesaj[0:70]
 
 print("\n| Mesajınızın Gönderilebilecek kısmı aşagıdaki gibidir.\n"+arlk)
 
