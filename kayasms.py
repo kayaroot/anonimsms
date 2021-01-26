@@ -3,6 +3,8 @@
 
 import requests
 from os import system as s
+import urllib.request
+import urllib.parse
 
 import os
 
@@ -44,8 +46,6 @@ print("\n| Mesajınızın Gönderilebilecek kısmı aşagıdaki gibidir.\n"+arlk
 drlm = input("\n| Mesajınız Gönderilsinmi?[y/n] >>> ")
 
 if drlm == "y" or drlm == "Y":
-    import urllib.request
-import urllib.parse
 
 def sendSMS(apikey, numbers, sender, message):
     data =  urllib.parse.urlencode({'apikey': apikey, 'numbers': numbers,
