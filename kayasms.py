@@ -43,13 +43,14 @@ print("\n| Mesajınızın Gönderilebilecek kısmı aşagıdaki gibidir.\n"+arlk
 
 drlm = input("\n| Mesajınız Gönderilsinmi?[y/n] >>> ")
 
-import requests
-resp = requests.post('https://textbelt.com/text', {
-  'phone': '5555555555',
-  'message': 'Hello world',
+if drlm == "y" or drlm == "Y":
+    print("\n"+sor+"\n"+arlk+"\n")
+    resp = requests.post('https://textbelt.com/text', {
+  'phone': sor,
+  'message': arlk,
   'key': 'textbelt',
-})
-print(resp.json())
+    })
+    print(resp.json())
 
 elif drlm == "n" or drlm == "N":
     quit()
