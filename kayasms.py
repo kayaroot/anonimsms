@@ -33,11 +33,11 @@ banner = """
 
 print(banner)
 
-sor = input("Tel adresi Örn: +905555555555 >>> ")
+numbers = input("Tel adresi Örn: +905555555555 >>> ")
 
 mesaj = input("Mesajınız >>> ")
 
-arlk = mesaj[0:70]
+message = mesaj[0:70]
 
 print("\n| Mesajınızın Gönderilebilecek kısmı aşagıdaki gibidir.\n"+arlk)
 
