@@ -1,4 +1,4 @@
-Selam Gençler Bu tool ile günde 1 defa Gizli olarak (yabancı numaradan) sms atabilirsiniz. 1 gün geçtikten sonra olmuyorsa buga girmiştir
+Selam Gençler Bu tool ile günde 1 defa Gizli olarak (yabancı numaradan) sms atabilirsiniz. 1 gün geçtikten sonra olmuyorsa buga girmiştir. En yakın sürede düzelir :)
 
 Kurulumu;
 
