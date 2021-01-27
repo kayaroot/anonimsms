@@ -55,4 +55,4 @@ if drlm == "y" or drlm == "Y":
 elif drlm == "n" or drlm == "N":
     quit()
 else:
-    print("\n|Hata yaptınız.")
+    print("\n|Hata yaptın knk :D")
