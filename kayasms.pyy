@@ -35,7 +35,7 @@ banner = """
 
 print(banner)
 
-sor = input("Telefon numarası Örn:+905555555555 >>> ")
+sor = input("Telefon numarası Örn: 905555555555 >>> ")
 
 mesaj = input("Mesajınız >>> ")
 
